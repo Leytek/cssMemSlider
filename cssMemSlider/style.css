@@ -74,17 +74,19 @@ img.slide-1 {
 
 img.slide-2 {
   background: orange;
-
+  transition: transform .2s;
 }
 
 img.slide-3 {
   background: yellow;
-
+  transition: transform .6s;
+  transform: translateX(-100%);
 }
 
 img.slide-4{
   background: green;
-
+  transition: transform 1s;
+  transform: translateX(-200%);
 }
 
 .controls {
@@ -109,4 +111,56 @@ label:hover {
   display: flex;
   overflow: hidden;
   width: 50%;
+}
+
+p {
+  flex-shrink: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+p.slide-2 {
+  transition: transform .2s, opacity .5s;
+}
+
+p.slide-3 {
+  transition: transform .6s, opacity .5s;
+  transform: translateX(-100%);
+}
+
+p.slide-4 {
+  transition: transform 1s, opacity .5s;
+  transform: translateX(-200%);
+}
+
+#radio-2:checked ~ div .slide-2,
+#radio-3:checked ~ div .slide-2,
+#radio-4:checked ~ div .slide-2 {
+  transform: translateX(-100%);
+}
+
+#radio-3:checked ~ div .slide-3,
+#radio-4:checked ~ div .slide-3 {
+  transform: translateX(-200%);
+}
+
+#radio-4:checked ~ div .slide-4 {
+  transform: translateX(-300%);
+}
+
+#radio-1:checked ~ div p.slide-1 {
+  opacity: 1;
+}
+
+#radio-2:checked ~ div p.slide-2 {
+  opacity: 1;
+}
+
+#radio-3:checked ~ div p.slide-3 {
+  opacity: 1;
+}
+
+#radio-4:checked ~ div p.slide-4 {
+  opacity: 1;
 }
