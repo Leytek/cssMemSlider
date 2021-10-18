@@ -142,7 +142,7 @@ span {
   width: 1.5rem;
   height: 1.5rem;
   margin: auto;
-  border: 4px solid darkslateblue;
+  border: .25rem solid darkslateblue;
   border-radius: 50%;
   transition: border-color .3s;
 }
@@ -191,7 +191,7 @@ p {
   flex-shrink: 0;
   width: 100%;
   margin: 0;
-  font: normal 24px/2 Arial, sans-serif;
+  font: normal 1rem/3 Arial, sans-serif;
   opacity: 0;
   transition: opacity .6s;
 }
