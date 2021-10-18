@@ -68,6 +68,12 @@ main {
   margin: 1rem auto;
 }
 
+@media screen and (max-width: 53rem) {
+  main {
+    width: 94.3396vw;
+  }
+}
+
 .slides_img {
   grid-column: 1 / 3;
   display: flex;
@@ -77,9 +83,9 @@ main {
   border-radius: 1rem;
 }
 
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 53rem) {
   .slides_img {
-    height: 100vw;
+    height: 94.3396vw;
   }
 }
 
